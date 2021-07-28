@@ -29,12 +29,12 @@ public class 二_两数之加 {
 //            System.out.print(add.get(i)+" ");
 //        }
 
-        Node n1 = new Node(8);
+        Node n1 = new Node(3);
         n1.next = new Node(9);
         n1.next.next = new Node(1);
 
         Node n2 = new Node(1);
-        n2.next = new Node(0);
+        n2.next = new Node(5);
         n2.next.next = new Node(1);
 
         Node result = add2(n1, n2);
