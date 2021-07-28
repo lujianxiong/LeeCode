@@ -2,13 +2,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**题目：（题目有误）
- *  给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个整数，并返回它们的数组下标。
- （你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。）
-
-
+ *  给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
+ *  请你将两个数相加，并以相同形式返回一个表示和的链表。
+ *  （你可以假设除了数字 0 之外，这两个数都不会以 0 开头。）
     参考：https://blog.csdn.net/newayue/article/details/114532986?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162690937116780261959470%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=162690937116780261959470&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-2-114532986.first_rank_v2_pc_rank_v29&utm_term=public+ListNode+addTwoNumbers%28ListNode+l1%2C+ListNode+l2%29+%7B+++++++++ListNode+head+%3D+null%2C+tail+%3D+null%3B+++++++++int+carry+%3D+0%3B+++++++++while+%28l1+%21%3D+null+%7C%7C+l2+%21%3D+null%29+%7B+++++++++++++int+n1+%3D+l1+%21%3D+null+%3F&spm=1018.2226.3001.4187
  */
-
 
 public class 二_两数之加 {
 
@@ -45,6 +43,7 @@ public class 二_两数之加 {
 
     }
 
+    //第一种：自己基于链表LinkedList实现的
     public static List add1(List a, List b){
         LinkedList temp = new LinkedList();
         int y = 0;
@@ -75,7 +74,7 @@ public class 二_两数之加 {
     }
 
 
-
+    //第二种：力扣官方解法-自定义一个Node节点类
     public static Node add2(Node n1, Node n2){
         //构造一个空的链表
         Node head = null;
