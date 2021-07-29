@@ -25,7 +25,7 @@ public class 七零四_二分查找 {
         int right = nums.length - 1;  //右指针
 
         while (left <= right){
-            pivot = left + (right - left)/2;
+            pivot = left + (right - left)/2;   //采用这个方式而不是用(left+right)/2，因为这种方式可以防止计算时溢出
             if (target == nums[pivot]){
                 return pivot;
             }

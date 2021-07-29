@@ -10,6 +10,7 @@ import java.util.List;
 
 public class 二_两数之加 {
 
+
     public static void main(String args[]){
 //        LinkedList l1 = new LinkedList();
 //        l1.add(8);
