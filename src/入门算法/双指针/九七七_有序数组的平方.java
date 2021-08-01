@@ -18,6 +18,10 @@ public class 九七七_有序数组的平方 {
         int[] square2 = sortedSquares2(num2);
         System.out.println(Arrays.toString(square2));
 
+        int[] num3 = {-9,-4,0,3,5,6};
+        int[] square3 = sortedSquares2(num3);
+        System.out.println(Arrays.toString(square3));
+
 
 
     }
@@ -80,11 +84,24 @@ public class 九七七_有序数组的平方 {
 
 
     //方法三：双指针
+    /**
+     * 算法思路：
+     * 这个方法很巧妙。它其实是一个头指针一个尾指针，每次比较数的平方，将最大的从新数组的最后开始存放，直到j < i 停止。
+     */
     public static int[] sortedSquares3(int[] nums){
-
-
-
-        return new int[0];
+        int n = nums.length;
+        int[] ans = new int[n];
+        for (int i=0, j=n-1, pos = n-1; i<=j; ){
+            if (nums[i] * nums[i] > nums[j] * nums[j]){
+                ans[pos] = nums[i] * nums[i];
+                i++;
+            }else {
+                ans[pos] = nums[j] * nums[j];
+                j--;
+            }
+            pos--;
+        }
+        return ans;
     }
 
 
