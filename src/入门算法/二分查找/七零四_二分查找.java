@@ -5,7 +5,6 @@ package 入门算法.二分查找;
  */
 public class 七零四_二分查找 {
     public static void main(String[] args) {
-        //测试一下
         int[] nums = {1,2,3,4,5,9,10,99};
         int index = search(nums, 4);
         System.out.println(index);
@@ -36,16 +35,10 @@ public class 七零四_二分查找 {
  *     · 如果目标值等于中间元素，则找到目标值
  *     · 如果目标值较小，继续往左侧搜索
  *     · 如果目标值较大，继续往右侧搜索
- */
-
-/**
- * pivot中心点，平时也可以用mid
- */
-
-/**
  *
- */
-
-/**
- *  采用left + (right - left)/2; 而不是用(left+right)/2，因为这种方式可以防止计算时溢出
+ *     pivot中心点，平时也可以用mid
+ *
+ *     采用left + (right - left)/2; 而不是用(left+right)/2，因为这种方式可以防止计算时溢出
+ *
+ *
  */
