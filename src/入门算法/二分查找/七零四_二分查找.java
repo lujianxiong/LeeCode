@@ -6,23 +6,22 @@ package 入门算法.二分查找;
 public class 七零四_二分查找 {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,9,10,99};
-        int index = search(nums, 4);
+        int index = search(nums, 9);
         System.out.println(index);
     }
 
     public static int search(int[] nums, int target){
         int left = 0;  //左指针
         int right = nums.length - 1;  //右指针
-
         while (left <= right){
-            int pivot = left + ((right - left)>> 1);   //采用这个方式而不是用(left+right)/2，因为这种方式可以防止计算时溢出
-            if (target == nums[pivot]){
-                return pivot;  //找到目标值就返回下标
+            int pivot = left + ((right - left) >> 1);   //采用这个方式而不是用(left+right)/2，因为这种方式可以防止计算时溢出
+            if (nums[pivot] == target){  //找到目标值就返回下标
+                return pivot;
             }
-            if (target < nums[pivot]){
+            if (nums[pivot] < target){  //如果pivot处的值小于目标值，说明目标值在大的一边，缩小左边界
+                left = pivot +1;
+            }else {  //否则目标值在小的一遍，缩小右边界
                 right = pivot - 1;
-            }else {
-                left = pivot + 1;
             }
         }
         return -1;  //目标不存在，返回-1
